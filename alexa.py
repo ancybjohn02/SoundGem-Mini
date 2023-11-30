@@ -55,6 +55,9 @@ def take_command():
                 talk("Nice to listen to you, fellow adventurer of the digital realm")
                 print(command)
                 speak(command)
+            if "quit" in command:  # Check if the user wants to quit
+                talk("Goodbye!")
+                exit() 
         return command
 
     except sr.UnknownValueError:
