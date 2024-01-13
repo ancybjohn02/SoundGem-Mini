@@ -26,9 +26,9 @@ def speak(text):
     engine.runAndWait()
 
 def greet():
-    speak("I'm your alexa")
+    speak("I'm your SoundGem-Mini")
     speak("How may I assist you in your endeavors?")
-    print("I'm your alexa")
+    print("I'm your SoundGem-Mini")
     print("How may I assist you in your endeavors?")
 
 def talk(text, emotion="happy"):
@@ -51,7 +51,7 @@ def take_command():
             command = listener.recognize_google(voice, show_all=False)
             command = command.lower()
             if "alexa" in command:
-                command = command.replace("alexa", "")
+                command = command.replace("SoundGem", "")
                 talk("Nice to listen to you, fellow adventurer of the digital realm")
                 print(command)
                 speak(command)
